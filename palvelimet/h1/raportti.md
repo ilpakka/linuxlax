@@ -17,6 +17,13 @@ Hyvän raportoinnin perusperiaatteita ovat muun muassa:
 
 ## **2. Linuxin asentaminen virtuaalikoneeseen:**
 
+### **Toteutusympäristö**
+
+| Käyttöjärjestelmä | Versio | Ajankohta | Lisätiedot |
+| :- | - | - | :-: |
+| Windows 11 | 24H2 | 22.8.2025 | - |
+
+
 ### 1. Alkutoimet
 
 1. Voit tarkastella Debianin näköistiedostoja [täältä](https://cdimage.debian.org/debian-cd/13.0.0-live/amd64/iso-hybrid/). Tässä esimerkissä lataamme tiedoston *debian-live-13.0.0-amd64-kde.iso*. Löydät tiedoston skrollaamalla sivua hieman alas.
