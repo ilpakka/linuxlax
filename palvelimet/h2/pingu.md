@@ -176,7 +176,7 @@ Tulostuksesta näkee, että alusta pyörii virtuaalisesti ja muistia on varattun
 
 ![rauta](src/rauta.png)
 
-## g) Lokki
+## g) Vapaaehtoinen Lokki
 
 Tarkastellessamme *dpkg.log.ykkösen* häntää huomataan, että sieltä löytyy *mailcapin* sekä *hicolor-icon-themen* lokia ja asennusta kirjattuina.
 <br>
