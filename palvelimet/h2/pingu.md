@@ -194,3 +194,8 @@ Päätin ladata *gotham-colors* -nimisen plugarin, joka sai editorin näyttämä
 Lyhyt pätkä koodia ja ulos.
 
 ![gotham](src/gotham.png)
+
+## Lähteet
+- Tero Karvinen. https://terokarvinen.com/2020/command-line-basics-revisited/?fromSearch=command%20line%20basics%20revisited
+- Micro. https://micro-editor.github.io/
+- Thomas Le Roux. https://github.com/novln/micro-gotham-colors
