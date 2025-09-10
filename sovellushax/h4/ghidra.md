@@ -2,7 +2,7 @@
 
 ## x) Tiivistä
 
-John Hammond kävi videollaan läpi vuoden 2022 PicoCTF-kilpailun haasteen nimeltä "Bbbbloat", joka on videon otsikossa nimetty virheellisesti "bbbloat". Kyseinen tehtävä löytyy edelleen PicoGymin puolelta, josta löytyy myös paljon muita todella hyviä harjoituksia. Videolla käytiin läpi ensin "matalalla roikkuvia hedelmiä", eli ensin varsinaista Ghidran käyttöä tehtiin staattista kurkkaamista komennoilla *file*, *ltrace*, *strace* sekä *objdump*. Binääri löytyi kovakoodattuna Ghidran analyysin löytämän main-funktion sisältä.
+John Hammond kävi videollaan läpi vuoden 2022 PicoCTF-kilpailun haasteen nimeltä "Bbbbloat", joka on videon otsikossa nimetty virheellisesti "bbbloat". Kyseinen tehtävä löytyy edelleen PicoGymin puolelta, josta löytyy myös paljon muita todella hyviä harjoituksia. Videolla käytiin läpi ensin "matalalla roikkuvia hedelmiä", eli ensin varsinaista Ghidran käyttöä tehtiin staattista kurkkaamista komennoilla *file*, *ltrace*, *strace* sekä *objdump*. Binääritehtävän salasana löytyi kovakoodattuna Ghidran analyysin löytämän main-funktion sisältä.
 
 | Komento | Esimerkki | Selitys |
 | :------ | :-------- | :------ |
