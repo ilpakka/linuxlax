@@ -281,7 +281,7 @@ Tavoite: *Ratkaise binääri.*
 
 ![nora20](src/nora20.png)
 
-4. Jännää löytyy, nimittäin merkkiin asetetaan 'y', *%DAT_00102038* hexi 75 vastaa *'u'* ja sitten loopissa se taas muuttuu merkkijonon *"vmnpoi"* indeksin mukaisesti. Voisiko siis olla, että meidän syötteen pitää siis olla kahta vaille *"yuvmnpoi"*? Kokeillaan!
+4. Jännää löytyy, nimittäin merkkiin asetetaan 'y', *&DAT_00102038* kohdan hexi 75 vastaa *'u'* ja sitten loopissa se taas muuttuu merkkijonon *"vmnpoi"* indeksin mukaisesti. Voisiko siis olla, että meidän syötteen pitää siis olla kahta vaille *"yuvmnpoi"*? Kokeillaan!
 
 5. Muokataan meidän valmista convertteriä niin, että se tulostaa meille tämän teorian mukaisen version.
 
