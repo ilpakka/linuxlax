@@ -241,13 +241,55 @@ int main()
 
 Tavoite: *Crackme01 on useampia ratkaisuja. Montako löydät? Miksi?*
 
+1. Ensimmäinen ratkaisu meillä olikin jo tuo kovakoodatun salasanan *password1* löytäminen ja testaaminen.
+
+2. Toinen nopea ratkaisu on muuttaa vertailukohdan *JZ* muotoon *JNZ* niin ohjelma kääntyy ja hyväksyy nyt kaikki väärät salasanat. Tämä muutos päivittyy myös decompileriin näkyviin.
+
+![nora14](src/nora14.png)
+
+3. Kolmas ratkaisu on muuttaa kovakoodattu salasana haluttuun merkkijonoon ( *s_ghidra_0010201f* )ja päivittämällä odotetun merkkijonon pituutta ( *EDX, 0x6* ).
+
+![nora15](src/nora15.png)
+
+4. Seuraavaksi mieleen tulee argc-näpräilyä, jos vaikka koko syöttö ohitetaan muuttamalla *CMP argc, 0x2* jälkeinen hyppy *JZ*:ksi. Tuo ei kuitenkaan toiminut ihan halutulla tavalla...
+
 ## h) Vapaaehtoinen: Pyytämättäkin
 
 Tavoite: *Crackme02 on kaksi ratkaisua. Löydätkö molemmat?*
 
+1. Ensimmäinen ratkaisu on tuo aikaisempi yhtä vaille *password1* syöttö ohjelman mukana.
+
+2. Käännetään vertailu taas kerran ylösalaisin. Nyt ohjelma hyväksyy kaikki syötteet joiden merkit eivät täsmää muutoksessa alkuperäistä *password1*.
+
+![nora16](src/nora16.png)
+
 ## i) Vapaaehtoinen: A ray
 
 Tavoite: *Ratkaise binääri.*
+
+1. Maketaan crackme02e ja importataan se projektiin mukaan. Laitetaan Ghidra analysoimaan binääriä ja katsotaan mitä sieltä löytyy jälleen kerran.
+
+![nora17](src/nora17.png)
+
+2. Tutulta näyttää vaikka tuolla onkin vähän muutakin taustalla tapahtumassa. Nimetään kaikki taas ensin, jotta luettavuus on selkeämpää.
+
+![nora18](src/nora18.png)
+
+3. Heti paljon selkeämpi kaava ja ihan oikeassa oltiin, eli tuttua kamaa on. Ainoana erona on oikeastaa se, että "yhtä vaille" sijaan liikutaan kahdella ja merkkiin tallentuu aina *&DAT_00102038* kohteen indeksi. Käydään kurkkaamassa, että mitä tuolla oikein tapahtuu.
+
+![nora19](src/nora19.png)
+
+![nora20](src/nora20.png)
+
+4. Jännää löytyy, nimittäin merkkiin asetetaan 'y', *%DAT_00102038* hexi 75 vastaa *'u'* ja sitten loopissa se taas muuttuu merkkijonon *"vmnpoi"* indeksin mukaisesti. Voisiko siis olla, että meidän syötteen pitää siis olla kahta vaille *"yuvmnpoi"*? Kokeillaan!
+
+5. Muokataan meidän valmista convertteriä niin, että se tulostaa meille tämän teorian mukaisen version.
+
+![nora21](src/nora21.png)
+
+6. Kokeillaan salasanaa, binääri rikki, salasana tiedossa ja gg!
+
+![nora22](src/nora22.png)
 
 ## Lähteet:
 - Hammond, J. Huhtikuu 2022. GHIDRA for Reverse Engineering (PicoCTF 2022 #42 'bbbloat'). Video. Katsottavissa: https://www.youtube.com/watch?v=oTD_ki86c9I
