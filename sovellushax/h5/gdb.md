@@ -173,6 +173,56 @@ int main()
 
 Tavoite: *Kokeile Nora Crackmes harjoituksia tehtävä 3 ja 4 ja loput vapaaehtoisia.*
 
+1. Avataan ensimmäisenä tuo Lab3:sen crackmes-hakemisto. Sieltä näyttää löytyvän useammat tehtävien 3 ja 4 versiot, mutta ei tehdä samaa virhettä kuin aikaisemmin ja napataan aluksi tuo sorsaton *crackme03d.64*. Ajetaan ohjelma niin tiedetään myös miten se käyttäytyy.
+
+![lab22](src/lab22.png)
+
+![lab23](src/lab23.png)
+
+2. Ajetaan binääri gdb:llä, seurataan samoja askeleita kuin aikaisemmin eli break mainiin ja kurkataan assemblerinäkymää. Silmään pistää heti kutsu funktioon *check_pw*, joten lisätään toinen breakpointti siihen. Koska ohjelma haluaa mukaan argumentin niin ne saa kaveriksi komennolla *set args* jonka perään voi listata tarpeen mukaan. Tuo pitää kuitenkin aina asettaa ennen ajamista. Kurkataan mitä tuolta *check_pw* sisältä löytyy.
+
+![lab24](src/lab24.png)
+
+3. Sieltä löytyy vähän samantyyppinen looppi kuin aikaisemmasta tehtävästä. Gdb kuitenkin heitti meidät ulos kun pyrin jatkamaan funktion sisään. Hetken mietittyä ajattelin käydä tarkistamassa *check_pw* edeltävää pätkää, että onko tälle meidän syötteelle jotain rajoitteita.
+
+![lab25](src/lab25.png)
+
+4. No sellainenhan sieltä löytyi. Ennen *check_pwtä* ohjelma kutsuu *strlen@plt* ja nähtävästi odottaa 6 merkin pituista syötettä. Emme siis koskaan etene *check_pw* luokse jos argv[1] != 6. Mainista löytyi myös virheen ja onnistumisen osiot, jotka helpottavat toiminnan seuraamista. Kokeillaan aikaisempaa vaihetta nyt uudestaan 6 merkin syötteellä.
+
+![lab26](src/lab26.png)
+
+5. Sisällä ollaan ja rekisterit paljastavat meille nyt jonkin kovakoodin sekä 5 tavua. Jos katsomme tarkemmin mitä *check_pw* sisällä tapahtuu niin tämä alkaa pikkuhiljaa selkeytyä.
+
+![lab27](src/lab27.png)
+
+![lab28](src/lab28.png)
+
+6. Oikea salasana paljastuu todennäköisesti siis summaamalla tavuja kovakoodin merkkien päälle. Merkkijonon pituus on 6 ja tavuja 5, joten viimeinen merkki jää nähtävästi muuntamatta. Kirjoitetaan taas kerran sellainen c-pätkä, joka tulostaa meille tuon mahdollisesti oikean salasanan.
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    const char rsi[] = "lAmBdA";
+    char rdx[] = {2, 3, 2, 3, 5, 0};
+    char salasana[sizeof(rsi)];
+    int i;
+
+    for (i = 0; i < strlen(rsi); i++) {
+        salasana[i] = rsi[i] + rdx[i];
+    }
+
+    printf(salasana);
+    return 0;
+}
+```
+
+7. Koodi näyttää toimineen, kokeillaan salasanaa ja läpi meni!
+
+![lab29](src/lab29.png)
+
 ## d) Vapaaehtoinen: Lab4
 
 Tavoite: *Crackmes.one harjoitus. Saatko salasanan selville?*
