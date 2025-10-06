@@ -86,3 +86,4 @@ Tavoite: *Testaa oma sivusi TLS jollain yleisellä laadunvarmistustyökalulla, e
 - Apache. SSL/TLS Strong Encryption: How-To. https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html#configexample
 - Let's Encrypt. Status. https://letsencrypt.status.io/
 - Qualys SSL Labs. SSL Server Test. https://www.ssllabs.com/ssltest/
+- Karvinen, Tero. Linux palvelimet. https://terokarvinen.com/linux-palvelimet/

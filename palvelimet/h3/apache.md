@@ -184,3 +184,4 @@ Tavoite: *Laita sama tietokone vastaamaan kahdellla eri sivulla kahdesta eri nim
 - Apache. Name-based Virtual Host Support. https://httpd.apache.org/docs/2.4/vhosts/name-based.html
 - Tero Karvinen. Name Based Virtual Hosts on Apache - Multiple Websites to Single IP Address. https://terokarvinen.com/2018/04/10/name-based-virtual-hosts-on-apache-multiple-websites-to-single-ip-address/
 - Johanna Heinonen. GitHub. https://github.com/johannaheinonen/johanna-test-repo/blob/main/linux-03092025.md
+- Karvinen, Tero. Linux palvelimet. https://terokarvinen.com/linux-palvelimet/

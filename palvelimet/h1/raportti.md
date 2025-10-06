@@ -174,4 +174,5 @@ Suosikkiohjelmani Linuxilla on [Neofetch](https://github.com/dylanaraps/neofetch
 
 
 ## **Lähteet**:
-Karvinen, Tero. Raportin kirjoittaminen. https://terokarvinen.com/2006/raportin-kirjoittaminen-4/
+- Karvinen, Tero. Raportin kirjoittaminen. https://terokarvinen.com/2006/raportin-kirjoittaminen-4/
+- Karvinen, Tero. Linux palvelimet. https://terokarvinen.com/linux-palvelimet/
