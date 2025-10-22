@@ -10,4 +10,4 @@ UDP-striimin selvitys lisätty myös.
 
 # Lähteet
 
-- Karvinen, Tero. https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/
+- Tero Karvinen 2025. Verkkoon tunkeutuminen ja tiedustelu. Luettavissa: https://terokarvinen.com/verkkoon-tunkeutuminen-ja-tiedustelu/
