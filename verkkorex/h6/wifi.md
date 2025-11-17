@@ -1,5 +1,7 @@
 # h6 WiFi
 
+> HUOM! Harjoitusympäristön toiveiden mukaisesti tehtävien ratkaisujaketjua ei ole esitetty tässä raportissa lainkaan. Ainoastaan tehtävänäkymän suoritukset on lisätty mukaan.
+
 ## a) WiFi Challenge lab 2.1 
 Tavoite: *Tutustu harjoitusympäristöön.*
 
